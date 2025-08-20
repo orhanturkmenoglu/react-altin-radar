@@ -1,12 +1,34 @@
-# React + Vite
+# Altın Radar - React Uygulaması
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, React ile geliştirilmiş basit ve şık bir "Altın Radar" uygulamasıdır.  
+Harem Altın firmasına ait bilgileri ve kıymetli metal fiyatlarını gösteren, kullanıcı dostu bir arayüze sahiptir.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Özellikler
 
-## Expanding the ESLint configuration
+- Hakkımızda, Vizyon ve Misyon bölümleri  
+- Detay göster / gizle butonları ile içerik yönetimi  
+- Altın ve kıymetli metal fiyatları için API entegrasyonu (isteğe bağlı)  
+- Responsive tasarım ve modern CSS  
+- React Router ile sayfa yönetimi  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Kurulum
+
+1. Depoyu klonlayın:  
+   ```bash
+   git clone https://github.com/kullaniciadi/altin-radar.git
+
+
+## Kullanılan Teknolojiler
+
+-React
+-React Router
+-Vite (hızlı geliştirme aracı)
+-CSS (modüler ve responsive tasarım)
+
+## Katkıda Bulunma
+
+- Projeye katkıda bulunmak için lütfen pull request gönderin ya da issue açın.
