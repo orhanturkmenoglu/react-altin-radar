@@ -25,8 +25,11 @@ Harem Altın firmasına ait bilgileri ve kıymetli metal fiyatlarını gösteren
 ## Kullanılan Teknolojiler
 
 -React
+
 -React Router
+
 -Vite (hızlı geliştirme aracı)
+
 -CSS (modüler ve responsive tasarım)
 
 ## Katkıda Bulunma
