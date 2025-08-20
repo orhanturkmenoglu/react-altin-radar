@@ -1,0 +1,78 @@
+/* Navbar genel stil */
+.navbar {
+  width: 100%;
+  max-width: 100vw;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Logo veya başlık (güncellendi) */
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c49b33;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: #a97f1a;
+}
+
+/* Menü */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-link:hover {
+  color: #c49b33;
+  border-bottom: 2px solid #c49b33;
+}
+
+.navbar-link.active {
+  color: #c49b33;
+  border-bottom: 2px solid #c49b33;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 10px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,9 @@
+/* Footer basit stil */
+.footer-copy {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  background: #fff;
+}

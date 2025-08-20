@@ -1,0 +1,104 @@
+/* Genel container */
+.gold-container {
+  width: 95%;
+  height: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Başlık */
+.gold-title {
+  text-align: center;
+  color: #c49b33;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(to right, #fafafa, #f5f5f5);
+  border-bottom: 1px solid #eee;
+  letter-spacing: 1px;
+}
+
+/* Tablo wrapper (scroll için) */
+.table-wrapper {
+  max-height: 500px; /* scroll yüksekliği */
+  overflow-y: auto;
+}
+
+/* Tablo */
+.gold-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Sticky Başlık */
+.gold-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #fdfdfd;
+  padding: 12px;
+  border-bottom: 2px solid #e5e5e5;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+/* Hücreler */
+.gold-table td {
+  padding: 14px;
+  border-bottom: 1px solid #f1f1f1;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+/* Hover efekti */
+.gold-table tbody tr:hover {
+  background: #fff9e6;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Yükselen değerler */
+.up {
+  background: #f0fff5;
+  color: #2ca94f;
+  font-weight: bold;
+}
+
+/* Düşen değerler */
+.down {
+  background: #fff5f5;
+  color: #d9534f;
+  font-weight: bold;
+}
+
+/* Hover sırasında yönlü hücreler */
+.gold-table tbody tr:hover .up {
+  background: #d4f7e3;
+}
+
+.gold-table tbody tr:hover .down {
+  background: #ffe5e5;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .gold-table th, .gold-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .gold-title {
+    font-size: 18px;
+  }
+}

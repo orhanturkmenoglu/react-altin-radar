@@ -1,0 +1,142 @@
+/* Genel container */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2b2b2b;
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+/* Başlık */
+.about-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #c49b33;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.about-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #c49b33;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Her bölüm (vizyon, misyon vb.) */
+.about-section {
+  margin-bottom: 50px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: default; /* sadece container değil */
+}
+
+.about-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.about-section h2 {
+  font-size: 22px;
+  color: #c49b33;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Toggle için ekstra içerik */
+.about-extra {
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Buton */
+.about-toggle-btn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: #c49b33;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.about-toggle-btn:hover {
+  background-color: #a67f27;
+}
+
+/* Galeri */
+.about-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.about-gallery img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 40px 16px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-section h2 {
+    font-size: 18px;
+  }
+
+  .about-section p {
+    font-size: 15px;
+  }
+
+  .about-gallery img {
+    max-width: 100%;
+  }
+}
+
+/* Basit fadeIn animasyonu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
