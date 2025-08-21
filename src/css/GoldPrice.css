@@ -60,6 +60,25 @@
   transition: all 0.2s ease;
 }
 
+/* Canlı değişim vurgusu */
+.cell-flash-up {
+  background: #e8fff0 !important;
+  animation: flashUp 1.2s ease;
+}
+.cell-flash-down {
+  background: #ffecec !important;
+  animation: flashDown 1.2s ease;
+}
+
+@keyframes flashUp {
+  0% { background: #c9f5da; }
+  100% { background: transparent; }
+}
+@keyframes flashDown {
+  0% { background: #ffd2d2; }
+  100% { background: transparent; }
+}
+
 /* Hover efekti */
 .gold-table tbody tr:hover {
   background: #fff9e6;
