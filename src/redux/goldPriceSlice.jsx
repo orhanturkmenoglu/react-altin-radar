@@ -44,10 +44,6 @@ const goldPriceSlice = createSlice({
   name: "goldPrice",
   initialState,
   reducers: {
-    setGoldData: (state,action)=>{
-        state.data = action.payload;
-        state.lastUpdate = new Date().toISOString();
-    }
   },
   extraReducers: (builder) => {
     builder
@@ -68,5 +64,5 @@ const goldPriceSlice = createSlice({
   },
 });
 
-export const {setGoldData} = goldPriceSlice.actions;
+export const {} = goldPriceSlice.actions;
 export default goldPriceSlice.reducer;
