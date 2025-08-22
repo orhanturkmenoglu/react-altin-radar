@@ -3,12 +3,24 @@ import Footer from "./components/Footer";
 import { navLinks } from "./navLinks";
 
 
-import useGoldPrices from "./hooks/useGoldPrices";
 import AppRoutes from "./components/AppRoutes";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchGoldPrices } from "./redux/goldPriceSlice";
 
 function App() {
-  const { data, loading, lastUpdate, error } = useGoldPrices();
+   
+  const dispatch  = useDispatch();
 
+  const {data,loading,lastUpdate,error} = useSelector((store)=>store.goldPrice);
+
+  useEffect(() => {
+  const fetchData = async () => {
+    await dispatch(fetchGoldPrices());
+  };
+
+  fetchData();
+}, [dispatch]);
   return (
     <>
       <Navbar links={navLinks} />

@@ -1,11 +1,20 @@
-import React, { useState } from "react";
 import "../css/About.css";
 import { Outlet } from "react-router-dom";
+import ToggleButton from "./ToggleButton";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleAbout, toggleVision, toggleMission } from "../redux/aboutSlice"
+
 
 function About() {
-  const [showMoreAbout, setShowMoreAbout] = useState(false);
+/*   const [showMoreAbout, setShowMoreAbout] = useState(false);
   const [showMoreVision, setShowMoreVision] = useState(false);
   const [showMoreMission, setShowMoreMission] = useState(false);
+ */
+
+   const dispatch = useDispatch();
+  const {showMoreAbout,showMoreVision,showMoreMission} = useSelector((store)=>store.about)
+
+ 
 
   return (
     <div className="about-container">
@@ -35,17 +44,18 @@ function About() {
             <p>
               Müşterilerine değerli metallerin tedarikinden satışına,
               nakliyatından lojistiğine kadar geniş bir hizmet yelpazesi sunan
-              Harem Altın, 40 yılı aşkın tecrübesiyle güvenilir bir iş ortağıdır.
+              Harem Altın, 40 yılı aşkın tecrübesiyle güvenilir bir iş
+              ortağıdır.
             </p>
           </div>
         )}
 
-        <button
-          className="about-toggle-btn"
-          onClick={() => setShowMoreAbout((prev) => !prev)}
-        >
-          {showMoreAbout ? "Kapat" : "Detay Göster"}
-        </button>
+         <ToggleButton
+          isOpen={showMoreAbout}
+          onSelect={()=>{
+            dispatch(toggleAbout())
+          }}
+        />
       </section>
 
       <section className="about-section">
@@ -67,25 +77,26 @@ function About() {
             <p>
               Müşterilerine değerli metallerin tedarikinden satışına,
               nakliyatından lojistiğine kadar geniş bir hizmet yelpazesi sunan
-              Harem Altın, 40 yılı aşkın tecrübesiyle güvenilir bir iş ortağıdır.
+              Harem Altın, 40 yılı aşkın tecrübesiyle güvenilir bir iş
+              ortağıdır.
             </p>
           </div>
         )}
 
-        <button
-          className="about-toggle-btn"
-          onClick={() => setShowMoreVision((prev) => !prev)}
-        >
-          {showMoreVision ? "Kapat" : "Detay Göster"}
-        </button>
+         <ToggleButton
+          isOpen={showMoreVision}
+          onSelect={()=>{
+            dispatch(toggleVision())
+          }}
+        />
       </section>
 
       <section className="about-section">
         <h2>Misyonumuz</h2>
         <p>
           Sürekli iyileştirdiği ürün ve hizmet kalitesiyle müşterilerin mevcut
-          ve gelecek beklentilerini en iyi şekilde karşılamak. Alanının en
-          uzman ekipleriyle, sektörün en güvenilir ve yenilikçi şirketi olarak
+          ve gelecek beklentilerini en iyi şekilde karşılamak. Alanının en uzman
+          ekipleriyle, sektörün en güvenilir ve yenilikçi şirketi olarak
           müşterilerin her zaman en yakınında yer almak.
         </p>
 
@@ -99,17 +110,18 @@ function About() {
             <p>
               Müşterilerine değerli metallerin tedarikinden satışına,
               nakliyatından lojistiğine kadar geniş bir hizmet yelpazesi sunan
-              Harem Altın, 40 yılı aşkın tecrübesiyle güvenilir bir iş ortağıdır.
+              Harem Altın, 40 yılı aşkın tecrübesiyle güvenilir bir iş
+              ortağıdır.
             </p>
           </div>
         )}
 
-        <button
-          className="about-toggle-btn"
-          onClick={() => setShowMoreMission((prev) => !prev)}
-        >
-          {showMoreMission ? "Kapat" : "Detay Göster"}
-        </button>
+        <ToggleButton
+          isOpen={showMoreMission}
+          onSelect={()=>{
+            dispatch(toggleMission())
+          }}
+        />
       </section>
 
       <div className="about-gallery">
